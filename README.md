@@ -21,6 +21,7 @@ MiSTeR Sync solves this by comparing save files across both SD cards side by sid
 - **Side-by-side comparison** — View save files from both devices with modification dates
 - **Color-coded status** — Green (synced), yellow (different dates), red (exists on one side only)
 - **Smart sync** — Automatically detects the newer file and copies it to the other device, handling `.sav` ↔ `.srm` extension conversion
+  > ⚠️ **Important:** This feature relies on accurate file modification timestamps. Your MiSTeR FPGA must have its clock set correctly — either via internet (NTP) or by installing the [RTC board add-on](https://github.com/MiSTer-devel/Main_MiSTer/wiki/RTC-board). If the MiSTeR clock is wrong, file dates will be unreliable and sync may copy the wrong direction.
 - **Unique file detection** — Finds saves that only exist on one device and offers to copy them across
 - **MD5 integrity verification** — Validates every copy operation to ensure no data corruption
 - **Optional backups** — Toggle to create timestamped `.bak` files before overwriting
